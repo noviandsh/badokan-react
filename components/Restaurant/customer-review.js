@@ -13,7 +13,7 @@ export default function CustomerReview({ customerReviews }) {
                     reviews.map((review, i) => (
                         <div key={i} className="review-card">
                             <h4>{review.name}</h4>
-                            <p>"{review.review}"</p>
+                            <p>&ldquo;{review.review}&rdquo;</p>
                             <div className="review-date">{review.date} <i className="material-icons">schedule</i></div>
                         </div>
                     ))
