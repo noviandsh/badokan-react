@@ -1,5 +1,5 @@
 {
-  "name": "belajar-next",
+  "name": "badokan-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "next": "12.1.1",
+    "nprogress": "^0.2.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sweetalert2": "^11.4.8"
   },
   "devDependencies": {
     "eslint": "8.12.0",
