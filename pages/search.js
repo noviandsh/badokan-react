@@ -32,7 +32,7 @@ export default function Search() {
                         <RestaurantList title="Hasil Pencarian" restaurants={restaurants} /> :
                         <>
                             <h2>Hasil Pencarian</h2>
-                            <span id="alert">Maaf, restoran dengan nama "{q}" tidak ditemukan.</span>
+                            <span id="search-alert">Maaf, restoran dengan nama &ldquo;{q}&rdquo; tidak ditemukan.</span>
                         </>
                 }
             </div>

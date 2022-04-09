@@ -319,13 +319,11 @@ main {
 #search-alert {
     color: red;
     font-weight: bold;
-    font-size: 17px;
-}
-
-#search-alert>p {
+    font-size: 1.3em;
+    display: block;
+    text-align: center;
     margin-top: 40px;
 }
-
 
 /* restaurant LIST START */
 
