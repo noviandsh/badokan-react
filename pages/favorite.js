@@ -7,9 +7,9 @@ export default function Favorite({ dataRestaurants }) {
     const [restaurants, setRestaurants] = useState({})
 
     useEffect(() => {
-        const likedRestaurants = JSON.parse(localStorage.getItem("likedRestaurants")) || {}
+        const likedRestaurants = JSON.parse(localStorage.getItem("likedRestaurants")) || { id: [] }
         setRestaurants(dataRestaurants.restaurants.filter(restaurant => (
-            likedRestaurants.id.indexOf(restaurant.id) >= 0
+            likedRestaurants.id.includes(restaurant.id)
         )))
     }, [])
     return (

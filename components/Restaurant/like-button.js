@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react"
 
 export default function LikeButton({ id }) {
-    const getLikedRestaurants = () => JSON.parse(localStorage.getItem("likedRestaurants")) || {}
+    const getLikedRestaurants = () => JSON.parse(localStorage.getItem("likedRestaurants")) || { id: [] }
 
     const [isLiked, setIsLiked] = useState(false)
 
     useEffect(() => {
         let likedRestaurants = getLikedRestaurants()
-        if (likedRestaurants.id.indexOf(id) >= 0) {
+        if (likedRestaurants.id.includes(id)) {
             setIsLiked(true)
         }
     }, [])
@@ -30,7 +30,7 @@ export default function LikeButton({ id }) {
         let likedRestaurants = getLikedRestaurants()
         // // check if there is liked restaurants saved in localStorage
         if (likedRestaurants) {
-            const likedIndex = likedRestaurants.id.indexOf(id)
+            const likedIndex = likedRestaurants.id ? likedRestaurants.id.indexOf(id) : undefined
             if (likedIndex >= 0) {
                 likedRestaurants.id.splice(likedIndex, 1)
             } else {
