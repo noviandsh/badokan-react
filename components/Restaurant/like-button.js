@@ -7,7 +7,7 @@ export default function LikeButton({ id }) {
 
     useEffect(() => {
         let likedRestaurants = getLikedRestaurants()
-        if (likedRestaurants.id.includes(id)) {
+        if (likedRestaurants.id.indexOf(id) >= 0) {
             setIsLiked(true)
         }
     }, [])

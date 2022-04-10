@@ -9,7 +9,7 @@ export default function Favorite({ dataRestaurants }) {
     useEffect(() => {
         const likedRestaurants = JSON.parse(localStorage.getItem("likedRestaurants")) || {}
         setRestaurants(dataRestaurants.restaurants.filter(restaurant => (
-            likedRestaurants.id.includes(restaurant.id)
+            likedRestaurants.id.indexOf(restaurant.id) >= 0
         )))
     }, [])
     return (
